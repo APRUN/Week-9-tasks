@@ -1,14 +1,18 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 main()
 {
-    string name;
-    cout<<"Enter the name: ";
-    getline(cin,name);
-
-
-    for(int i=0; name[i]!='\0'; i++)
+    int result;
+    string moves[10] = {"shimmy", "shake", "pirouette", "slide", "boxstep", "headspin", "dosado", "pop", "lock", "arabesque"};
+    int number[4];
+    for (int i = 0; i < 4; i++)
     {
-    cout<<"The character at Index "<<i <<" is "<<name[i]<<endl;
+        cout << "Enter the number: ";
+        cin >> number[i];
+    }
+    for (int i = 0; i < 4; i++)
+    {
+        result = number[i] + i;
+        cout << moves[result]<<"\t";
     }
 }

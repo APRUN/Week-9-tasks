@@ -2,19 +2,23 @@
 using namespace std;
 main()
 {
-    int n;
-    float avg=0,sum=0;
-    cout<<"Enter the total numbers of number: ";
-    cin>>n;
-    float number[n];
-    for(int i=0; i<n; i++)
+    
+    string movie[5]={"gladiator", "starwars","terminator","takinglives","tombrider"};
+    string moviename;
+    float amount;
+    cout<<"Enter the movie name: ";
+    cin>>moviename;
+    for(int i=0; i<5; i++ )
     {
-        cout<<"Enter the number: ";
-        cin>>number[i];
-        sum=number[i]+sum;
+     if(moviename==movie[i]&&i%2!=0)
+     {
+        amount=500*0.95; 
+     }
+     if(moviename==movie[i]&&i%2==0)
+     {
+        amount=500*0.90;
+     }
     }
 
-    avg=sum/n;
-    cout<<"The sum is: "<<sum<<endl;
-    cout<<avg;
+cout<<amount;
 }

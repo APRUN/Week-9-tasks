@@ -2,19 +2,21 @@
 using namespace std;
 main()
 {
-    int n,product;
-    cout<<"Enter the number of integers: ";
-    cin>>n;
-    float num[n];
-    for(int i=0; i<n; i++)
+    int size;
+    string num[4];
+    for(int j=0; j<4; j++)
     {
-        cout<<"Enter the number: ";
-        cin>>num[i];
+        cout<<"Enter the string: ";
+        cin>>num[j];
     }
-    cout<<"Enter the product number: ";
-    cin>>product;
-    for(int j=n; j>=0; j--)
+
+    if(num[0]==num[1]&& num[1]==num[2]&& num[2]==num[3]&&num[0].length()==num[1].length()&&num[1].length()==num[2].length()&&num[2].length()==num[3].length())
     {
-        cout<<"The product is: "<<product*num[j]<<endl;
+        cout<<"Yes";
     }
+    else
+    {
+cout<<"No";
+    }
+ 
 }

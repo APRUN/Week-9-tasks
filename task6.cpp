@@ -1,30 +1,40 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 main()
 {
-    int n,smallest,used;
-    bool chota=false;
-    cout<<"Enter the number of integers: ";
-    cin>>n;
-    float num[n];
-    for(int i=0; i<n; i++)
-    {
-        cout<<"Enter the number: ";
-        cin>>num[i];
-    }
-   smallest=num[0];
-    for(int j=0; j<n; j++)
-    {
-       if(smallest<num[j+1])
-       {
-        used=smallest;
-        chota=true;
-        break;
-       }
+int num[100];
+int trans,n;
+cout<<"Enter the number of integers: ";
+cin>>n;
+cout<<"Enter the number of transformation: ";
+cin>>trans;
+for(int i=0; i<n; i++)
+{
+   cout<<"Enter the number: ";
+   cin>>num[i];
 
+}
+
+for(int i=0; i<n;i++)
+{
+if(num[i]%2==0)
+{
+    for(int j=0; j<trans; j++)
+    {
+        num[i]=num[i]-2;
     }
-       if(chota==true)
-       {
-        cout<<"Yes the smallest number is: "<<used;
-       }
+    cout<<num[i]<<"\t";
+}
+ 
+ if(num[i]%2!=0)
+ {
+    for(int m=0;m<trans;m++)
+    {
+        num[i]=num[i]+2;
+    }
+    cout<<num[i]<<"\t";
+ }
+    
+}
+
 }

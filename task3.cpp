@@ -1,33 +1,17 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 main()
 {
-    int n;
-    float search;
-    bool result = "False";
-    cout << "Enter number of intergers: ";
-    cin >> n;
-    float num[n];
-    for (int i = 0; i < n; i++)
+    string name;
+    cout<<"Enter the string: ";
+    cin>>name;
+    
+    if(name.length()%2==0)
     {
-        cout << "Enter the number: ";
-        cin >> num[i];
+        cout<<"True";
     }
-    cout << "Enter the number to search: ";
-    cin >> search;
-    for (int j = 0; j < n; j++)
+    else
     {
-        if (num[j] == search)
-        {
-            result = true;
-            break;
-        }
-    }
-    if (result == true)
-    {
-        cout << "Yes number is present";
-    }
-    else{
-        cout<<"Not found.";
+        cout<<"False";
     }
 }

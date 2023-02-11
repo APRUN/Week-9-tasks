@@ -1,31 +1,25 @@
 #include <iostream>
-#include <iostream>
 using namespace std;
 main()
 {
-    int n, largest, used;
-    cout << "Enter the number of integers: ";
-    cin >> n;
-    float num[n];
-    for (int i = 0; i < n; i++)
+    string name1, name2;
+    int count = 0;
+    char result;
+    cout << "Enter the string: ";
+    cin >> name1;
+    cout << "Enter the string: ";
+    cin >> name2;
+    for (int j = 0; j < name2.length(); j++)
     {
-        cout << "Enter the number: ";
-        cin >> num[i];
-    }
-    largest = num[0];
-    for (int j = 0; j <n; j++)
-    {
-        if (largest > num[j])
+        for (int i = 0; i < name1.length(); i++)
         {
-            used = largest;
-        cout << "Yes the larest number is: " << used;
-        break;
-           
+            if (name2[j] == name1[i])
+            {
+                count++;
+                 
+                 break;
+            }
         }
-        else
-        {
-            continue;
-        }
-        cout<<"Ok bye";
     }
+    cout << "There are " << count << "Digits repeating";
 }
